@@ -3,7 +3,6 @@ const webpack = require('webpack');
 const nodeExternals = require('webpack-node-externals');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
-// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const browserConfig = {
   mode: "production",
@@ -16,7 +15,6 @@ const browserConfig = {
     rules: [
       { test: /\.(js|jsx)$/, use: 'babel-loader' },
       { test: /\.css$/, use: [ 'css-loader' ]},
-      // { test: /\.css$/, use: [MiniCssExtractPlugin.loader, 'css-loader'] },
       {
         test: /\.(png|jpe?g|gif)$/i,
         use: [
@@ -31,14 +29,6 @@ const browserConfig = {
     extensions: ['.js', '.jsx']
   },
   plugins: [
-    // new HtmlWebpackPlugin({
-    //   template: './public/index.html',
-    //   minify: {
-    //     collapseWhitespace: true,
-    //     removeComments: true,
-    //   },
-    // }),
-    // new MiniCssExtractPlugin(),
     new webpack.DefinePlugin({
       __isBrowser__: "true"
     }),
