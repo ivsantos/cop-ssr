@@ -37,7 +37,6 @@ app.get('*', (req, res, next) => {
           <link href="/main.css" rel="stylesheet">
           <script>window.__INITIAL_DATA__ = ${JSON.stringify(data)}</script>
         </head>
-
         <body>
           <div id="app">${markup}</div>
         </body>
