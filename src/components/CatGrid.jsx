@@ -7,12 +7,12 @@ const CatGrid = ({ fetchInitialData, staticContext }) => {
     : staticContext.data));
 
   const [loading, setLoading] = useState(!cats);
-  // const fetchNewCats = useRef(!cats);
+  const fetchNewCats = useRef(!cats);
 
   const { tag } = useParams();
 
   useEffect(() => {
-    // if (fetchNewCats.current === true) {
+    if (fetchNewCats.current === true) {
       setLoading(true);
 
       fetchInitialData(tag)
@@ -22,9 +22,9 @@ const CatGrid = ({ fetchInitialData, staticContext }) => {
             setLoading(false);
           }, 1000)
         });
-    // } else {
-    //   fetchNewCats.current = true;
-    // }
+    } else {
+      fetchNewCats.current = true;
+    }
   }, [tag]);
 
   if (loading === true) {
