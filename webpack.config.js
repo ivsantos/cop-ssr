@@ -44,7 +44,7 @@ const browserConfig = {
 const serverConfig = {
   mode: "production",
   entry: path.resolve(__dirname, 'src', 'server', 'index.js'),
-  target: 'node',
+  externalsPresets: { node: true },
   externals: [nodeExternals()],
   output: {
     path: path.resolve(__dirname, 'dist'),
