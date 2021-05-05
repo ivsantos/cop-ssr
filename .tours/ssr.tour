@@ -1,0 +1,106 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "SSR",
+  "steps": [
+    {
+      "file": "package.json",
+      "description": "## Punto de entrada\nPara ejecutar la aplicación, lanzamos\n>> yarn dev\n\no \n\n>> npm run dev",
+      "line": 11
+    },
+    {
+      "file": "webpack.config.js",
+      "description": "## Configuración Webpack (browser)\nEsta es la configuración para el navegador.\n\nEspecial hincapié en esta variable `__isBrowser__` seteada en `true` y en la configuración del servidor en `false`.",
+      "line": 33,
+      "selection": {
+        "start": {
+          "line": 11,
+          "character": 36
+        },
+        "end": {
+          "line": 11,
+          "character": 40
+        }
+      }
+    },
+    {
+      "file": "webpack.config.js",
+      "description": "## Configuración Webpack (server)\nCon estas dos directivas, le decimos al bundle del server que no incluya node_modules (`fs`, `path`...)",
+      "line": 47,
+      "selection": {
+        "start": {
+          "line": 46,
+          "character": 3
+        },
+        "end": {
+          "line": 47,
+          "character": 32
+        }
+      }
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Servidor\nAplicación express, que sirve los estáticos del directorio dist.",
+      "line": 9
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Petición al servidor\nCualquier petición (siempre y cuando sea la carga inicial o entrada por barra de navegación) entrará por aquí.",
+      "line": 14
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Rutas en servidor\nPara hacer ciertas operaciones, debemos saber en qué ruta estamos, **react-router-dom** nos expone `matchPath` para esto.",
+      "line": 15
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Fetching en servidor\nSi ésta ruta es un componente que necesita datos, se hace la petición para mandar los datos pre-renderizados.",
+      "line": 19,
+      "selection": {
+        "start": {
+          "line": 17,
+          "character": 1
+        },
+        "end": {
+          "line": 19,
+          "character": 25
+        }
+      }
+    },
+    {
+      "file": "src/domain/routes.js",
+      "description": "## Definición de las rutas de la app\nTenemos 2, una de ellas haciendo llamada a una api.",
+      "line": 18
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Renderizado en servidor\n**ReactDOM** nos expone el método `renderToString` para generar la parte visual/presentacional en el servidor.",
+      "line": 22,
+      "selection": {
+        "start": {
+          "line": 17,
+          "character": 1
+        },
+        "end": {
+          "line": 19,
+          "character": 25
+        }
+      }
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Manejando rutas en el servidor\nPara manejar rutas, tenemos un router estático de **react-router-dom**, que no dispone de estado, a diferencia del de navegador.\n\nRecibe dos parámetros, la localización que se está pidiendo, y el contexto (datos) que queramos pasar.",
+      "line": 25,
+      "selection": {
+        "start": {
+          "line": 23,
+          "character": 7
+        },
+        "end": {
+          "line": 25,
+          "character": 23
+        }
+      }
+    }
+  ]
+}
