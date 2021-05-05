@@ -17,10 +17,8 @@ const CatGrid = ({ fetchInitialData, staticContext }) => {
 
       fetchInitialData(tag)
         .then((data) => {
-          setTimeout(() => {
-            setCats(data);
-            setLoading(false);
-          }, 1000)
+          setCats(data);
+          setLoading(false);
         });
     } else {
       fetchNewCats.current = true;
