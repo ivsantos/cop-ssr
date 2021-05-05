@@ -35,6 +35,7 @@ const browserConfig = {
     new CopyPlugin({
       patterns: [
         { from: path.resolve(__dirname, 'src', 'assets', 'robots.txt'), to: '.' },
+        { from: path.resolve(__dirname, 'src', 'assets', 'favicon.ico'), to: '.' },
       ],
     }),
   ]
