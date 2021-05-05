@@ -5,17 +5,14 @@ const CatGrid = ({ fetchInitialData, staticContext }) => {
   const [cats, setCats] = useState(() => (__isBrowser__
     ? window.__INITIAL_DATA__
     : staticContext.data));
-  console.log({ cats });
-  console.log({ __isBrowser__ });
 
   const [loading, setLoading] = useState(!cats);
-
-  const fetchNewCats = useRef(!cats);
+  // const fetchNewCats = useRef(!cats);
 
   const { tag } = useParams();
 
   useEffect(() => {
-    if (fetchNewCats.current === true) {
+    // if (fetchNewCats.current === true) {
       setLoading(true);
 
       fetchInitialData(tag)
@@ -25,10 +22,10 @@ const CatGrid = ({ fetchInitialData, staticContext }) => {
             setLoading(false);
           }, 1000)
         });
-    } else {
-      fetchNewCats.current = true;
-    }
-  }, [tag, fetchNewCats]);
+    // } else {
+    //   fetchNewCats.current = true;
+    // }
+  }, [tag]);
 
   if (loading === true) {
     return <i className="loading">🐱</i>;
