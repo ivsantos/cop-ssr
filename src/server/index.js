@@ -32,6 +32,7 @@ app.get('*', (req, res, next) => {
           <meta charset="UTF-8">
           <meta name="description" content="React SSR CoP">
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+          <meta name="google-site-verification" content="zP61LPT8YnwLvr7RrD3NoVoY4wtNgFwgerI3ni-uvsg" />
           <title>SSR in React 😸</title>
           <script src="/main.js" defer></script>
           <link href="/main.css" rel="stylesheet">
