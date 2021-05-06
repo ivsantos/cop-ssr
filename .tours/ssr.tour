@@ -25,14 +25,14 @@
     {
       "file": "webpack.config.js",
       "description": "## Configuración Webpack (server)\nCon estas dos directivas, le decimos al bundle del server que no incluya node_modules (`fs`, `path`...)",
-      "line": 47,
+      "line": 49,
       "selection": {
         "start": {
-          "line": 46,
-          "character": 3
+          "line": 47,
+          "character": 1
         },
         "end": {
-          "line": 47,
+          "line": 48,
           "character": 32
         }
       }
@@ -78,12 +78,12 @@
       "line": 22,
       "selection": {
         "start": {
-          "line": 17,
-          "character": 1
+          "line": 22,
+          "character": 29
         },
         "end": {
-          "line": 19,
-          "character": 25
+          "line": 22,
+          "character": 43
         }
       }
     },
@@ -99,6 +99,116 @@
         "end": {
           "line": 25,
           "character": 23
+        }
+      }
+    },
+    {
+      "file": "src/server/index.js",
+      "description": "## Enviando el HTML\nUna vez renderizado, enviamos el HTML con: \n- Las referencias a los estáticos que hacen falta (js, css...) .\n- Los datos iniciales de la app para que concuerde en rerenders en el navegador.\n- El markup generado de nuestra app.\n",
+      "line": 45,
+      "selection": {
+        "start": {
+          "line": 29,
+          "character": 7
+        },
+        "end": {
+          "line": 44,
+          "character": 14
+        }
+      }
+    },
+    {
+      "file": "src/browser/index.js",
+      "description": "## Hidratando al cliente\nLlamamos al método `hydrate` de **ReactDOM** que lo que hará es montar el markup sin realizar renders extras, e intentará montar los event listeners oportunos.",
+      "line": 6
+    },
+    {
+      "file": "src/browser/index.js",
+      "description": "## Manejando rutas en el cliente\nUsamos `BrowserRouter` de **react-router-dom** que sí dispone de estado, a diferencia del `StaticRouter` del servidor.",
+      "line": 10,
+      "selection": {
+        "start": {
+          "line": 7,
+          "character": 3
+        },
+        "end": {
+          "line": 9,
+          "character": 20
+        }
+      }
+    },
+    {
+      "file": "src/components/App.jsx",
+      "description": "## Seteando el router",
+      "line": 20,
+      "selection": {
+        "start": {
+          "line": 19,
+          "character": 11
+        },
+        "end": {
+          "line": 19,
+          "character": 17
+        }
+      }
+    },
+    {
+      "file": "src/components/App.jsx",
+      "description": "## Ruta cuando no hay match\nRuta 404",
+      "line": 23,
+      "selection": {
+        "start": {
+          "line": 19,
+          "character": 51
+        },
+        "end": {
+          "line": 19,
+          "character": 67
+        }
+      }
+    },
+    {
+      "file": "src/components/Home.jsx",
+      "description": "## Componente Home",
+      "line": 4
+    },
+    {
+      "file": "src/components/Navbar.jsx",
+      "description": "## Links de la app\nLinks de nuestra app a las rutas definidas en `categories`.",
+      "line": 29,
+      "selection": {
+        "start": {
+          "line": 27,
+          "character": 9
+        },
+        "end": {
+          "line": 29,
+          "character": 19
+        }
+      }
+    },
+    {
+      "file": "src/components/CatGrid.jsx",
+      "description": "## Componente CatGrid\nComprobamos si estamos en el navegador o no, y acorde a eso cogemos unos datos u otros.\n\n`staticContext` es el contexto que se recogerá desde el servidor y nos lo da `StaticRouter`.\n\n### Nota mental: Mostrar ejemplo de por qué es importante",
+      "line": 7
+    },
+    {
+      "file": "src/components/CatGrid.jsx",
+      "description": "## useEffect (sólo cliente)\nCuando cambie el valor del array de dependencias (`tag`), comprobaremos si tenemos que hacer re-fetch o no basado en la referencia definida anteriormente.\n\nÚtil para usar `window` o `document`.",
+      "line": 26
+    },
+    {
+      "file": "src/components/CatGrid.jsx",
+      "description": "## Pintamos los michis",
+      "line": 36,
+      "selection": {
+        "start": {
+          "line": 9,
+          "character": 3
+        },
+        "end": {
+          "line": 10,
+          "character": 38
         }
       }
     }
