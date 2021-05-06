@@ -198,6 +198,11 @@
       "line": 26
     },
     {
+      "file": "src/services/api.js",
+      "description": "## API\nUsamos cataas (Cats as-a-service)",
+      "line": 18
+    },
+    {
       "file": "src/components/CatGrid.jsx",
       "description": "## Pintamos los michis",
       "line": 36,
